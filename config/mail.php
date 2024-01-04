@@ -1,7 +1,5 @@
 <?php
-
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Default Mailer
@@ -12,9 +10,7 @@ return [
     | and used as needed; however, this mailer will be used by default.
     |
     */
-
-    'default' => env('MAIL_MAILER', 'smtp'),
-
+    'default' => env( 'MAIL_MAILER', 'smtp' ),
     /*
     |--------------------------------------------------------------------------
     | Mailer Configurations
@@ -32,24 +28,21 @@ return [
     |            "postmark", "log", "array", "failover", "roundrobin"
     |
     */
-
     'mailers' => [
         'smtp' => [
             'transport' => 'smtp',
-            'url' => env('MAIL_URL'),
-            'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
-            'port' => env('MAIL_PORT', 587),
-            'encryption' => env('MAIL_ENCRYPTION', 'tls'),
-            'username' => env('MAIL_USERNAME'),
-            'password' => env('MAIL_PASSWORD'),
+            'url' => env( 'MAIL_URL' ),
+            'host' => env( 'MAIL_HOST', 'smtp.mailgun.org' ),
+            'port' => env( 'MAIL_PORT', 587 ),
+            'encryption' => env( 'MAIL_ENCRYPTION', 'tls' ),
+            'username' => env( 'MAIL_USERNAME' ),
+            'password' => env( 'MAIL_PASSWORD' ),
             'timeout' => null,
-            'local_domain' => env('MAIL_EHLO_DOMAIN'),
+            'local_domain' => env( 'MAIL_EHLO_DOMAIN' ),
         ],
-
         'ses' => [
             'transport' => 'ses',
         ],
-
         'postmark' => [
             'transport' => 'postmark',
             // 'message_stream_id' => null,
@@ -57,28 +50,23 @@ return [
             //     'timeout' => 5,
             // ],
         ],
-
         'mailgun' => [
             'transport' => 'mailgun',
             // 'client' => [
             //     'timeout' => 5,
             // ],
         ],
-
         'sendmail' => [
             'transport' => 'sendmail',
-            'path' => env('MAIL_SENDMAIL_PATH', '/usr/sbin/sendmail -bs -i'),
+            'path' => env( 'MAIL_SENDMAIL_PATH', '/usr/sbin/sendmail -bs -i' ),
         ],
-
         'log' => [
             'transport' => 'log',
-            'channel' => env('MAIL_LOG_CHANNEL'),
+            'channel' => env( 'MAIL_LOG_CHANNEL' ),
         ],
-
         'array' => [
             'transport' => 'array',
         ],
-
         'failover' => [
             'transport' => 'failover',
             'mailers' => [
@@ -86,7 +74,6 @@ return [
                 'log',
             ],
         ],
-
         'roundrobin' => [
             'transport' => 'roundrobin',
             'mailers' => [
@@ -95,7 +82,6 @@ return [
             ],
         ],
     ],
-
     /*
     |--------------------------------------------------------------------------
     | Global "From" Address
@@ -106,12 +92,10 @@ return [
     | used globally for all e-mails that are sent by your application.
     |
     */
-
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
-        'name' => env('MAIL_FROM_NAME', 'Example'),
+        'address' => env( 'MAIL_FROM_ADDRESS', 'hello@example.com' ),
+        'name' => env( 'MAIL_FROM_NAME', 'Example' ),
     ],
-
     /*
     |--------------------------------------------------------------------------
     | Markdown Mail Settings
@@ -122,13 +106,10 @@ return [
     | of the emails. Or, you may simply stick with the Laravel defaults!
     |
     */
-
     'markdown' => [
         'theme' => 'default',
-
         'paths' => [
-            resource_path('views/vendor/mail'),
+            resource_path( 'views/vendor/mail' ),
         ],
     ],
-
 ];

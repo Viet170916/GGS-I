@@ -1,9 +1,6 @@
 <?php
-
 namespace App\Constants\Messages;
 
-class SuccessfulMessages
-{
+class SuccessfulMessages {
     const LOGIN_EMAIL_SENT_SUCCESSFUL = 'Waiting confirmation to login';
-
 }
