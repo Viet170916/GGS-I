@@ -1,11 +1,14 @@
 <?php
 namespace App\Http\Controllers\auth;
 
+use App\Constants\Code\HTTPStatusCodes;
 use App\Constants\Messages\ErrorMessages;
 use App\Constants\Messages\SuccessfulMessages;
 use App\Models\Email\LoginEmail;
 use App\Models\User;
 use Exception;
+use App\Models\Responses\GenericResponseModel;
+use Tymon\JWTAuth\Exceptions\TokenExpiredException;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Http\JsonResponse;
@@ -15,39 +18,44 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 use Tymon\JWTAuth\Exceptions\TokenBlacklistedException;
 use Tymon\JWTAuth\Facades\JWTAuth;
+use Illuminate\Database\UniqueConstraintViolationException;
 
 class AuthController extends BaseController {
     use AuthorizesRequests, ValidatesRequests;
 
     public function login( Request $request ): JsonResponse {
-        $validator = Validator ::make( $request -> all(), [
+        $validator = Validator::make( $request->all(), [
             'email' => 'required|email',
         ] );
-        if( $validator -> fails() ) {
-            return response() -> json( [ 'error' => ErrorMessages::INVALID_EMAIL ], 400 );
+        if( $validator->fails() ) {
+            return response()->json( [ 'error' => ErrorMessages::INVALID_EMAIL ], 400 );
         }
         try {
-            User ::create( [
-                'email' => $request -> input( "email" ),
-                'name' => $request -> input( 'email' ),
+            User::create( [
+                'email' => $request->input( "email" ),
+                'name' => $request->input( 'email' ),
             ] );
-        } catch( Exception $exception ) {
+        } catch( UniqueConstraintViolationException ) {
         }
-        $user = User ::where( 'email', $request -> input( "email" ) ) -> get()[ 0 ];
-        $token = JWTAuth ::fromUser( $user );
-        Mail ::to( $request -> input( 'email' ) ) -> send( new LoginEmail( $token ) ); // Gửi email
-        return response() -> json( [ 'message' => SuccessfulMessages::LOGIN_EMAIL_SENT_SUCCESSFUL ] );
-    }
-    public function verifyLogin( Request $request ): JsonResponse {
         try {
-            $token = JWTAuth ::parseToken();
-            $payload = $token -> getPayload();
-            JWTAuth ::invalidate( $token );
-            return response() -> json( [ 'message' => 'Token is valid', 'token' => $payload ] );
-        } catch( TokenBlacklistedException $blacklistedException ) {
-            return response() -> json( [ 'error' => 'Token is invalid' ], 401 );
-        } catch( Exception $e ) {
-            return response() -> json( [ 'error' => 'Token invalidation failed' ], 401 );
+            $user = User::where( 'email', $request->input( "email" ) )->get()[ 0 ];
+            $token = JWTAuth::fromUser( $user );
+            Mail::to( $request->input( 'email' ) )->send( new LoginEmail( $token ) );
+        } catch( Exception ) {
+            return response()->json( GenericResponseModel::Error( ErrorMessages::LOGIN_FAIL ), HTTPStatusCodes::NOT_FOUND );
+        }
+        return response()->json( GenericResponseModel::Success( SuccessfulMessages::LOGIN_EMAIL_SENT_SUCCESSFUL ) );
+    }
+    public function verifyLogin(): ?JsonResponse {
+        try {
+            $token = JWTAuth::parseToken();
+            $payload = $token->getPayload();
+            JWTAuth::invalidate( $token );
+            return null;
+        } catch( TokenBlacklistedException|TokenExpiredException ) {
+            return response()->json( GenericResponseModel::Error( ErrorMessages::TOKEN_EXPIRED ), HTTPStatusCodes::UNAUTHORIZED );
+        } catch( Exception ) {
+            return response()->json( GenericResponseModel::Error( ErrorMessages::TOKEN_INVALID ), HTTPStatusCodes::UNAUTHORIZED );
         }
     }
 }

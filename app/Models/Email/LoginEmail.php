@@ -9,12 +9,12 @@ class LoginEmail extends Mailable {
 
     public $token;
     public function __construct( $data ) {
-        $this -> token = $data;
+        $this->token = $data;
     }
     public function build(): LoginEmail {
-        return $this -> subject( 'Welcome to our website' )
-            -> view( 'emails.loginEmail' )
-            -> with( [ 'token' => $this -> token ] );
+        return $this->subject( 'Welcome to our website' )
+            ->view( 'emails.loginEmail' )
+            ->with( [ 'token' => $this->token ] );
     }
 }
 
