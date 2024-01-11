@@ -5,8 +5,6 @@ use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel {
     /**
-     * The application's global HTTP middleware stack.
-     * This middleware is run during every request to your application.
      * @var array<int, class-string|string>
      */
     protected $middleware = [
@@ -19,7 +17,6 @@ class Kernel extends HttpKernel {
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
     ];
     /**
-     * The application's route middleware groups.
      * @var array<string, array<int, class-string|string>>
      */
     protected $middlewareGroups = [
