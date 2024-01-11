@@ -1,13 +1,14 @@
 <?php
 namespace App\Models\Email;
 
+use Tymon\JWTAuth\Token;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
 class LoginEmail extends Mailable {
     use SerializesModels;
 
-    public $token;
+    public Token $token;
     public function __construct( $data ) {
         $this->token = $data;
     }

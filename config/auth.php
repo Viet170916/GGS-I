@@ -84,14 +84,14 @@ return [
     | quickly generating a very large amount of password reset tokens.
     |
     */
-    'passwords' => [
-        'users' => [
-            'provider' => 'users',
-            'table' => 'password_reset_tokens',
-            'expire' => 60,
-            'throttle' => 60,
-        ],
-    ],
+//    'passwords' => [
+//        'users' => [
+//            'provider' => 'users',
+//            'table' => 'password_reset_tokens',
+//            'expire' => 60,
+//            'throttle' => 60,
+//        ],
+//    ],
     /*
     |--------------------------------------------------------------------------
     | Password Confirmation Timeout
@@ -102,5 +102,5 @@ return [
     | confirmation screen. By default, the timeout lasts for three hours.
     |
     */
-    'password_timeout' => 10800,
+//    'password_timeout' => 10800,
 ];

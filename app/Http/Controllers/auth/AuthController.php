@@ -1,8 +1,12 @@
 <?php
 namespace App\Http\Controllers\auth;
 
+use Tymon\JWTAuth\Token;
+use App\Events\sendTokenLogin;
+use Illuminate\Support\Facades\Auth;
 use App\Constants\Code\HTTPStatusCodes;
 use App\Constants\Messages\ErrorMessages;
+use Illuminate\Support\Facades\Broadcast;
 use App\Constants\Messages\SuccessfulMessages;
 use App\Models\Email\LoginEmail;
 use App\Models\User;
@@ -39,7 +43,7 @@ class AuthController extends BaseController {
         }
         try {
             $user = User::where( 'email', $request->input( "email" ) )->get()[ 0 ];
-            $token = JWTAuth::fromUser( $user );
+            $token = new Token( JWTAuth::fromUser( $user, [ 'expires_in' => 3000 ] ) );
             Mail::to( $request->input( 'email' ) )->send( new LoginEmail( $token ) );
         } catch( Exception ) {
             return response()->json( GenericResponseModel::Error( ErrorMessages::LOGIN_FAIL ), HTTPStatusCodes::NOT_FOUND );
@@ -50,12 +54,18 @@ class AuthController extends BaseController {
         try {
             $token = JWTAuth::parseToken();
             $payload = $token->getPayload();
-            JWTAuth::invalidate( $token );
-            return null;
+//            JWTAuth::invalidate( $token );
+            $user = User::find( (int)$payload[ 'sub' ] );
+//            $currentToken = JWTAuth::fromUser( $user, [ 'expires_in' => 3000 ] );
+            return response()->json( GenericResponseModel::Error( "", null, $user ) );
         } catch( TokenBlacklistedException|TokenExpiredException ) {
             return response()->json( GenericResponseModel::Error( ErrorMessages::TOKEN_EXPIRED ), HTTPStatusCodes::UNAUTHORIZED );
-        } catch( Exception ) {
-            return response()->json( GenericResponseModel::Error( ErrorMessages::TOKEN_INVALID ), HTTPStatusCodes::UNAUTHORIZED );
         }
+//        catch( Exception ) {
+//            return response()->json( GenericResponseModel::Error( ErrorMessages::TOKEN_INVALID ), HTTPStatusCodes::UNAUTHORIZED );
+//        }
+    }
+    public function isLogin(): array {
+        return [ 'is-login' => true ];
     }
 }

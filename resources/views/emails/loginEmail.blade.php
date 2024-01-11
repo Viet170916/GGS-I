@@ -6,6 +6,6 @@
 <body>
     <h1>Welcome to our website!</h1>
     <p>Thank you for joining us.</p>
-    <a href="{{url('/api/auth/verify-login?token=' . $token)}}">Verify your account</a>
+    <a href="{{url('http://localhost:3000/auth?token=' . $token)}}">Verify your account</a>
 </body>
 </html>
