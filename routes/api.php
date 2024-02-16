@@ -13,9 +13,9 @@ Route::group( [ 'prefix' => 'auth', 'controller' => AuthController::class ],
 Route::middleware( [ 'jwt' ] )->group( function() {
     Route::get( "auth/is-login", [ AuthController::class, 'isLogin' ] );
 } );
-//Route::middleware( [ 'jwt' ] )->group( function() {
-Route::get( "/search", [ SearchController::class, 'search' ] );
-//} );
+Route::middleware( [ 'jwt' ] )->group( function() {
+    Route::get( "/search", [ SearchController::class, 'search' ] );
+} );
 Route::get( "/test", function() {
     return Elasticsearch::getSearchResult( 'FPT' );
 } );
