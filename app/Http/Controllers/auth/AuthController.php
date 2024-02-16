@@ -2,11 +2,8 @@
 namespace App\Http\Controllers\auth;
 
 use Tymon\JWTAuth\Token;
-use App\Events\sendTokenLogin;
-use Illuminate\Support\Facades\Auth;
 use App\Constants\Code\HTTPStatusCodes;
 use App\Constants\Messages\ErrorMessages;
-use Illuminate\Support\Facades\Broadcast;
 use App\Constants\Messages\SuccessfulMessages;
 use App\Models\Email\LoginEmail;
 use App\Models\User;
