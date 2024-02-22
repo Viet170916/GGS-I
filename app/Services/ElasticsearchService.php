@@ -14,13 +14,14 @@ class ElasticsearchService {
             $this->client = ClientBuilder::create()
                 ->setHosts( config( 'elasticsearch.hosts' ) )
                 ->setBasicAuthentication( config( 'elasticsearch.username' ), config( 'elasticsearch.password' ) )
-                ->setCABundle( config( 'elasticsearch.caBundle' ) )
+//                ->setCABundle( )
+                ->setCABundle(config( 'elasticsearch.caBundle' ) )
                 ->build();
         } catch( AuthenticationException $e ) {
         }
     }
-    public function getClient(): Client {
-        return $this->client;
+    public function getClient(): \Elastic\Elasticsearch\Response\Elasticsearch|\Http\Promise\Promise {
+        return $this->client->info();
     }
     /**
      * @throws ClientResponseException
@@ -70,7 +71,7 @@ class ElasticsearchService {
             foreach( $response[ 'hits' ][ 'hits' ] as $hit ) {
                 if( isset( $hit[ '_source' ][ 'url' ] ) ) {
                     $urls[] = [
-                        "host" => parse_url( $hit[ '_source' ][ 'url' ] )["host"],
+                        "host" => parse_url( $hit[ '_source' ][ 'url' ] )[ "host" ],
                         "url" => $hit[ '_source' ][ 'url' ],
                         "title" => $hit[ '_source' ][ 'data' ][ 'title' ][ 0 ],
                     ];
@@ -78,6 +79,35 @@ class ElasticsearchService {
             }
         }
         return $urls;
+    }
+    public function test( $searchTerm ) {
+        $params = [
+            'index' => 'test',
+            'body' => [
+                'size' => 15,
+                'query' => [
+                    'bool' => [
+                        'should' => [
+                            [ 'match' => [ 'data.title' => [ 'query' => $searchTerm, 'boost' => 9 ] ] ],
+                        ],
+                    ],
+                ],
+            ],
+        ];
+        $response = $this->client->search( $params );
+        $urls = [];
+        if( isset( $response[ 'hits' ][ 'hits' ] ) ) {
+            foreach( $response[ 'hits' ][ 'hits' ] as $hit ) {
+                if( isset( $hit[ '_source' ][ 'url' ] ) ) {
+                    $urls[] = [
+                        "host" => parse_url( $hit[ '_source' ][ 'url' ] )[ "host" ],
+                        "url" => $hit[ '_source' ][ 'url' ],
+                        "title" => $hit[ '_source' ][ 'data' ][ 'title' ][ 0 ],
+                    ];
+                }
+            }
+        }
+        return $response['hits'];
     }
 }
 

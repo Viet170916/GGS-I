@@ -38,7 +38,7 @@ class ElasticsearchSetup extends Command {
         foreach( $files as $file ) {
             $data = json_decode( file_get_contents( $file ), true );
             $params = [
-                'index' => 'crawled-pages',
+                'index' => 'test',
                 'id' => $data["url"],
                 'body' => $data,
             ];

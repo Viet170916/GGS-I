@@ -1,5 +1,6 @@
 <?php
 use App\Facades\Elasticsearch;
+use Illuminate\Support\Facades\Log;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\auth\AuthController;
 use Illuminate\Support\Facades\Route;
@@ -17,5 +18,8 @@ Route::middleware( [ 'jwt' ] )->group( function() {
     Route::get( "/search", [ SearchController::class, 'search' ] );
 } );
 Route::get( "/test", function() {
-    return Elasticsearch::getSearchResult( 'FPT' );
+//    Log::info("aaaa");
+//    exec( 'node crawler.js --url https://daihoc.fpt.edu.vn -- 20' );
+//    return Elasticsearch::getClient();
+    return Elasticsearch::test( 'zara' );
 } );
