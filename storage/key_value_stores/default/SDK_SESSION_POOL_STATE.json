@@ -1,0 +1,484 @@
+{
+  "usableSessionsCount": 9,
+  "retiredSessionsCount": 0,
+  "sessions": [
+    {
+      "id": "session_K0e9IhmCw9",
+      "cookieJar": {
+        "version": "tough-cookie@4.1.3",
+        "storeType": "MemoryCookieStore",
+        "rejectPublicSuffixes": true,
+        "enableLooseMode": false,
+        "allowSpecialUseDomain": true,
+        "prefixSecurity": "silent",
+        "cookies": []
+      },
+      "userData": {},
+      "maxErrorScore": 3,
+      "errorScoreDecrement": 0.5,
+      "expiresAt": "2024-02-23T10:12:10.943Z",
+      "createdAt": "2024-02-23T09:22:10.943Z",
+      "usageCount": 0,
+      "maxUsageCount": 50,
+      "errorScore": 0
+    },
+    {
+      "id": "session_14zWUWCl3T",
+      "cookieJar": {
+        "version": "tough-cookie@4.1.3",
+        "storeType": "MemoryCookieStore",
+        "rejectPublicSuffixes": true,
+        "enableLooseMode": false,
+        "allowSpecialUseDomain": true,
+        "prefixSecurity": "silent",
+        "cookies": [
+          {
+            "key": "_gid",
+            "value": "GA1.3.858544696.1708680132",
+            "expires": "2024-02-24T09:22:12.000Z",
+            "domain": "fptshop.com.vn",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2024-02-23T09:22:19.147Z",
+            "lastAccessed": "2024-02-23T09:22:37.143Z"
+          },
+          {
+            "key": "_gat",
+            "value": "1",
+            "expires": "2024-02-23T09:23:12.000Z",
+            "domain": "fptshop.com.vn",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2024-02-23T09:22:19.148Z",
+            "lastAccessed": "2024-02-23T09:22:37.144Z"
+          },
+          {
+            "key": "_gcl_au",
+            "value": "1.1.700071654.1708680133",
+            "expires": "2024-05-23T09:22:12.000Z",
+            "domain": "fptshop.com.vn",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2024-02-23T09:22:19.150Z",
+            "lastAccessed": "2024-02-23T09:22:37.146Z"
+          },
+          {
+            "key": "_ga",
+            "value": "GA1.1.19419614.1708680132",
+            "expires": "2025-03-29T09:22:35.044Z",
+            "domain": "fptshop.com.vn",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2024-02-23T09:22:19.150Z",
+            "lastAccessed": "2024-02-23T09:22:37.317Z"
+          },
+          {
+            "key": "__rtbh.lid",
+            "value": "%7B%22eventType%22%3A%22lid%22%2C%22id%22%3A%22jBTvmxz9tE08yCStKhfk%22%7D",
+            "expires": "2025-02-22T16:22:13.000Z",
+            "domain": "fptshop.com.vn",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2024-02-23T09:22:19.151Z",
+            "lastAccessed": "2024-02-23T09:22:37.042Z"
+          },
+          {
+            "key": "_fbp",
+            "value": "fb.2.1708680133408.1993684906",
+            "expires": "2024-05-23T09:22:13.000Z",
+            "domain": "fptshop.com.vn",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2024-02-23T09:22:19.151Z",
+            "lastAccessed": "2024-02-23T09:22:37.147Z"
+          },
+          {
+            "key": "_sp_ses.d55b",
+            "value": "*",
+            "expires": "2024-02-23T09:52:34.000Z",
+            "domain": "fptshop.com.vn",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2024-02-23T09:22:19.152Z",
+            "lastAccessed": "2024-02-23T09:22:37.045Z"
+          },
+          {
+            "key": "_sp_id.d55b",
+            "value": "c5853c4b-bbce-443c-9511-0b139df445a7.1708680134.1.1708680155..ab787ad3-0453-4e07-82f9-d3cfbcc1cd80....0",
+            "expires": "2025-03-29T09:22:34.995Z",
+            "domain": "fptshop.com.vn",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2024-02-23T09:22:19.152Z",
+            "lastAccessed": "2024-02-23T09:22:37.316Z"
+          },
+          {
+            "key": "__admUTMtime",
+            "value": "1708680133",
+            "expires": "2024-03-24T09:22:13.000Z",
+            "domain": "fptshop.com.vn",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2024-02-23T09:22:19.153Z",
+            "lastAccessed": "2024-02-23T09:22:37.147Z"
+          },
+          {
+            "key": "_tt_enable_cookie",
+            "value": "1",
+            "expires": "2025-03-19T09:22:13.000Z",
+            "domain": "fptshop.com.vn",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2024-02-23T09:22:19.156Z",
+            "lastAccessed": "2024-02-23T09:22:37.148Z"
+          },
+          {
+            "key": "_ttp",
+            "value": "uxN5V7c_ui_eKzOu6ABoUoPkuve",
+            "expires": "2025-03-19T09:22:13.000Z",
+            "domain": "fptshop.com.vn",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2024-02-23T09:22:19.157Z",
+            "lastAccessed": "2024-02-23T09:22:37.150Z"
+          },
+          {
+            "key": "dtdz",
+            "value": "e7d7e33a-f2dc-520f-85e7-c7d4c879cf44",
+            "expires": "2025-02-22T16:22:14.000Z",
+            "domain": "fptshop.com.vn",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2024-02-23T09:22:19.161Z",
+            "lastAccessed": "2024-02-23T09:22:37.057Z"
+          },
+          {
+            "key": "fpt_uuid",
+            "value": "%22775d4d43-2280-434b-a754-4eed39c4f712%22",
+            "expires": "2025-02-22T09:22:19.000Z",
+            "domain": "fptshop.com.vn",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2024-02-23T09:22:19.162Z",
+            "lastAccessed": "2024-02-23T09:22:37.151Z"
+          },
+          {
+            "key": "ajs_group_id",
+            "value": "null",
+            "expires": "2025-02-22T09:22:14.000Z",
+            "domain": "fptshop.com.vn",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2024-02-23T09:22:19.162Z",
+            "lastAccessed": "2024-02-23T09:22:37.152Z"
+          },
+          {
+            "key": "log_6dd5cf4a-73f7-4a79-b6d6-b686d28583fc",
+            "value": "23468f5a-bd60-4944-82db-4c596bd1923d",
+            "expires": "2025-02-22T09:22:14.000Z",
+            "domain": "fptshop.com.vn",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2024-02-23T09:22:19.165Z",
+            "lastAccessed": "2024-02-23T09:22:37.099Z"
+          },
+          {
+            "key": "_aff_network",
+            "value": "null",
+            "expires": "2024-03-08T09:22:14.000Z",
+            "domain": "fptshop.com.vn",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2024-02-23T09:22:19.165Z",
+            "lastAccessed": "2024-02-23T09:22:37.153Z"
+          },
+          {
+            "key": "vMobile",
+            "value": "1",
+            "expires": "2024-02-23T10:12:37.037Z",
+            "domain": "fptshop.com.vn",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2024-02-23T09:22:19.166Z",
+            "lastAccessed": "2024-02-23T09:22:37.314Z"
+          },
+          {
+            "key": "__iid",
+            "expires": "2024-03-24T09:22:35.000Z",
+            "domain": "fptshop.com.vn",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2024-02-23T09:22:19.166Z",
+            "lastAccessed": "2024-02-23T09:22:37.103Z"
+          },
+          {
+            "key": "__su",
+            "value": "0",
+            "expires": "2024-03-24T09:22:35.000Z",
+            "domain": "fptshop.com.vn",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2024-02-23T09:22:19.168Z",
+            "lastAccessed": "2024-02-23T09:22:37.108Z"
+          },
+          {
+            "key": "__zi",
+            "value": "2000.SSZzejyD7iu_cVEzsr0LpYAPvhoKKa7GR9V-_iX0Iyv-rUpesayLndUHgEhNJn_3TfZcxjLFMyHvcE_hsKTIpW.1",
+            "expires": "2025-03-29T09:22:14.820Z",
+            "domain": "fptshop.com.vn",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2024-02-23T09:22:19.170Z",
+            "lastAccessed": "2024-02-23T09:22:37.162Z"
+          },
+          {
+            "key": "__RC",
+            "value": "4",
+            "expires": "2025-03-29T09:22:14.909Z",
+            "domain": "fptshop.com.vn",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2024-02-23T09:22:19.171Z",
+            "lastAccessed": "2024-02-23T09:22:37.126Z"
+          },
+          {
+            "key": "__R",
+            "value": "1",
+            "expires": "2025-03-29T09:22:14.910Z",
+            "domain": "fptshop.com.vn",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2024-02-23T09:22:19.172Z",
+            "lastAccessed": "2024-02-23T09:22:37.127Z"
+          },
+          {
+            "key": "__uif",
+            "value": "__uid%3A2135521681608599873%7C__ui%3A-1%7C__create%3A1708680134",
+            "expires": "2024-03-04T09:22:35.000Z",
+            "domain": "fptshop.com.vn",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2024-02-23T09:22:19.172Z",
+            "lastAccessed": "2024-02-23T09:22:37.318Z"
+          },
+          {
+            "key": "_hjSessionUser_731679",
+            "value": "eyJpZCI6ImVkMzIyZGE2LTU0ODQtNTY5OS04YzRjLWM2NmU0MjU3NmE0MiIsImNyZWF0ZWQiOjE3MDg2ODAxMzU1NjgsImV4aXN0aW5nIjp0cnVlfQ==",
+            "expires": "2025-02-22T09:22:26.000Z",
+            "domain": "fptshop.com.vn",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2024-02-23T09:22:19.172Z",
+            "lastAccessed": "2024-02-23T09:22:37.291Z"
+          },
+          {
+            "key": "_hjSession_731679",
+            "value": "eyJpZCI6IjQxZGI1ZTY3LWU1YzgtNDkyNC1iNjBkLWJiZTk0NWFlOWE3ZCIsImMiOjE3MDg2ODAxMzU1NjksInMiOjAsInIiOjAsInNiIjowLCJzciI6MCwic2UiOjAsImZzIjoxLCJzcCI6MH0=",
+            "expires": "2024-02-23T09:52:15.000Z",
+            "domain": "fptshop.com.vn",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2024-02-23T09:22:19.173Z",
+            "lastAccessed": "2024-02-23T09:22:37.165Z"
+          },
+          {
+            "key": "cf_clearance",
+            "value": "o5X.c9GsvoVEn9_cHW97kMtVPBjoaX3xFCFnCqKhSQw-1708680151-1.0-AY2Y44t4qLGGu4JqTKUG2MCLXKVqlgI68r2bwjhedl3zWiV3UnRBLvnV4saKafuIFgVYocXwDd/wy5sLw0QaDhk=",
+            "expires": "2025-02-22T09:22:31.477Z",
+            "domain": "fptshop.com.vn",
+            "path": "/",
+            "secure": true,
+            "httpOnly": true,
+            "hostOnly": false,
+            "creation": "2024-02-23T09:22:19.174Z",
+            "lastAccessed": "2024-02-23T09:22:37.305Z"
+          },
+          {
+            "key": "_ga_ZR815NQ85K",
+            "value": "GS1.1.1708680132.1.1.1708680156.36.0.0",
+            "expires": "2025-03-29T09:22:36.928Z",
+            "domain": "fptshop.com.vn",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2024-02-23T09:22:19.177Z",
+            "lastAccessed": "2024-02-23T09:22:37.321Z"
+          },
+          {
+            "key": "__tb",
+            "value": "0",
+            "expires": "2025-03-29T09:22:35.231Z",
+            "domain": "fptshop.com.vn",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2024-02-23T09:22:30.435Z",
+            "lastAccessed": "2024-02-23T09:22:37.281Z"
+          },
+          {
+            "key": "__IP",
+            "value": "3741196870",
+            "expires": "2025-03-29T09:22:35.231Z",
+            "domain": "fptshop.com.vn",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2024-02-23T09:22:30.436Z",
+            "lastAccessed": "2024-02-23T09:22:37.281Z"
+          }
+        ]
+      },
+      "userData": {},
+      "maxErrorScore": 3,
+      "errorScoreDecrement": 0.5,
+      "expiresAt": "2024-02-23T10:12:10.944Z",
+      "createdAt": "2024-02-23T09:22:10.944Z",
+      "usageCount": 16,
+      "maxUsageCount": 50,
+      "errorScore": 0
+    },
+    {
+      "id": "session_hap1kdE2gY",
+      "cookieJar": {
+        "version": "tough-cookie@4.1.3",
+        "storeType": "MemoryCookieStore",
+        "rejectPublicSuffixes": true,
+        "enableLooseMode": false,
+        "allowSpecialUseDomain": true,
+        "prefixSecurity": "silent",
+        "cookies": []
+      },
+      "userData": {},
+      "maxErrorScore": 3,
+      "errorScoreDecrement": 0.5,
+      "expiresAt": "2024-02-23T10:12:21.109Z",
+      "createdAt": "2024-02-23T09:22:21.109Z",
+      "usageCount": 0,
+      "maxUsageCount": 50,
+      "errorScore": 0
+    },
+    {
+      "id": "session_LGDRfQemzF",
+      "cookieJar": {
+        "version": "tough-cookie@4.1.3",
+        "storeType": "MemoryCookieStore",
+        "rejectPublicSuffixes": true,
+        "enableLooseMode": false,
+        "allowSpecialUseDomain": true,
+        "prefixSecurity": "silent",
+        "cookies": []
+      },
+      "userData": {},
+      "maxErrorScore": 3,
+      "errorScoreDecrement": 0.5,
+      "expiresAt": "2024-02-23T10:12:21.111Z",
+      "createdAt": "2024-02-23T09:22:21.111Z",
+      "usageCount": 0,
+      "maxUsageCount": 50,
+      "errorScore": 0
+    },
+    {
+      "id": "session_wvcGcFHFrN",
+      "cookieJar": {
+        "version": "tough-cookie@4.1.3",
+        "storeType": "MemoryCookieStore",
+        "rejectPublicSuffixes": true,
+        "enableLooseMode": false,
+        "allowSpecialUseDomain": true,
+        "prefixSecurity": "silent",
+        "cookies": []
+      },
+      "userData": {},
+      "maxErrorScore": 3,
+      "errorScoreDecrement": 0.5,
+      "expiresAt": "2024-02-23T10:12:21.113Z",
+      "createdAt": "2024-02-23T09:22:21.113Z",
+      "usageCount": 0,
+      "maxUsageCount": 50,
+      "errorScore": 0
+    },
+    {
+      "id": "session_ymrdPh0fDi",
+      "cookieJar": {
+        "version": "tough-cookie@4.1.3",
+        "storeType": "MemoryCookieStore",
+        "rejectPublicSuffixes": true,
+        "enableLooseMode": false,
+        "allowSpecialUseDomain": true,
+        "prefixSecurity": "silent",
+        "cookies": []
+      },
+      "userData": {},
+      "maxErrorScore": 3,
+      "errorScoreDecrement": 0.5,
+      "expiresAt": "2024-02-23T10:12:27.876Z",
+      "createdAt": "2024-02-23T09:22:27.876Z",
+      "usageCount": 0,
+      "maxUsageCount": 50,
+      "errorScore": 0
+    },
+    {
+      "id": "session_fUMU5RZSsa",
+      "cookieJar": {
+        "version": "tough-cookie@4.1.3",
+        "storeType": "MemoryCookieStore",
+        "rejectPublicSuffixes": true,
+        "enableLooseMode": false,
+        "allowSpecialUseDomain": true,
+        "prefixSecurity": "silent",
+        "cookies": []
+      },
+      "userData": {},
+      "maxErrorScore": 3,
+      "errorScoreDecrement": 0.5,
+      "expiresAt": "2024-02-23T10:12:31.626Z",
+      "createdAt": "2024-02-23T09:22:31.626Z",
+      "usageCount": 0,
+      "maxUsageCount": 50,
+      "errorScore": 0
+    },
+    {
+      "id": "session_uxXJrBkuFM",
+      "cookieJar": {
+        "version": "tough-cookie@4.1.3",
+        "storeType": "MemoryCookieStore",
+        "rejectPublicSuffixes": true,
+        "enableLooseMode": false,
+        "allowSpecialUseDomain": true,
+        "prefixSecurity": "silent",
+        "cookies": []
+      },
+      "userData": {},
+      "maxErrorScore": 3,
+      "errorScoreDecrement": 0.5,
+      "expiresAt": "2024-02-23T10:12:32.730Z",
+      "createdAt": "2024-02-23T09:22:32.730Z",
+      "usageCount": 0,
+      "maxUsageCount": 50,
+      "errorScore": 0
+    },
+    {
+      "id": "session_mTwiYBZANT",
+      "cookieJar": {
+        "version": "tough-cookie@4.1.3",
+        "storeType": "MemoryCookieStore",
+        "rejectPublicSuffixes": true,
+        "enableLooseMode": false,
+        "allowSpecialUseDomain": true,
+        "prefixSecurity": "silent",
+        "cookies": []
+      },
+      "userData": {},
+      "maxErrorScore": 3,
+      "errorScoreDecrement": 0.5,
+      "expiresAt": "2024-02-23T10:12:33.817Z",
+      "createdAt": "2024-02-23T09:22:33.817Z",
+      "usageCount": 0,
+      "maxUsageCount": 50,
+      "errorScore": 0
+    }
+  ]
+}

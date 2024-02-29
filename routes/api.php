@@ -20,6 +20,6 @@ Route::middleware( [ 'jwt' ] )->group( function() {
 Route::get( "/test", function() {
 //    Log::info("aaaa");
 //    exec( 'node crawler.js --url https://daihoc.fpt.edu.vn -- 20' );
-//    return Elasticsearch::getClient();
-    return Elasticsearch::test( 'zara' );
+    return Elasticsearch::getClient();
+//    return Elasticsearch::test( 'zara' );
 } );

@@ -12,10 +12,11 @@ class ElasticsearchService {
     public function __construct() {
         try {
             $this->client = ClientBuilder::create()
-                ->setHosts( config( 'elasticsearch.hosts' ) )
-                ->setBasicAuthentication( config( 'elasticsearch.username' ), config( 'elasticsearch.password' ) )
-//                ->setCABundle( )
-                ->setCABundle(config( 'elasticsearch.caBundle' ) )
+                ->setElasticCloudId(config('elasticsearch.cloudId'))
+                ->setApiKey(config('elasticsearch.apiKey'))
+//                ->setHosts( config( 'elasticsearch.hosts' ) )
+//                ->setBasicAuthentication( config( 'elasticsearch.username' ), config( 'elasticsearch.password' ) )
+//                ->setCABundle(config( 'elasticsearch.caBundle' ) )
                 ->build();
         } catch( AuthenticationException $e ) {
         }

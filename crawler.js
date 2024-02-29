@@ -1,4 +1,4 @@
-require('dotenv').config({path: '/Users/vuquocviet/PhpstormProjects/GGS-I/.env'});
+require('dotenv').config({path: '.env'});
 
 const {
     PlaywrightCrawler, Dataset, ProxyConfiguration,
@@ -7,19 +7,35 @@ const yargs = require("yargs");
 const {JSDOM} = require("jsdom");
 const {Client} = require('@elastic/elasticsearch');
 const {readFileSync} = require("fs");
-const client = new Client({
-    "node": process.env.ELASTIC_HOST,
-    "auth": {
-        "username": process.env.ELASTIC_USER_NAME,
-        "password": process.env.ELASTIC_PASSWORD,
-    },
-    tls: {
-        ca: readFileSync(process.env.ELASTIC_CA_BUNDLE),
-        // cert: process.env.ELASTIC_CA_BUNDLE
+const {env} = require("crawler/.eslintrc");
+// const client = new Client({
+//     "node": process.env.ELASTIC_HOST,
+//     "auth": {
+//         "username": process.env.ELASTIC_USER_NAME,
+//         "password": process.env.ELASTIC_PASSWORD,
+//     },
+//     tls: {
+//         ca: readFileSync(process.env.ELASTIC_CA_BUNDLE),
+//         // cert: process.env.ELASTIC_CA_BUNDLE
+//
+//         // "rejectUnauthorized": true
+//     },
+// });
 
-        // "rejectUnauthorized": true
-    },
-});
+// const client = new Client({
+//     node: 'https://bfaf9781c3854099a0f224420877638c.us-central1.gcp.cloud.es.io', // Elasticsearch endpoint
+//     auth: {
+//         apiKey: { // API key ID and secret
+//             id: process.env.ELASTIC_CLOUD_ID,
+//             api_key: process.env.ELASTIC_API_KEY,
+//         }
+//     }
+// })
+const client = new Client({
+    cloud: { id: process.env.ELASTIC_CLOUD_ID },
+    auth: { apiKey: process.env.ELASTIC_API_KEY }
+})
+
 // ...
 let counter = 0;
 

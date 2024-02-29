@@ -8,4 +8,15 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    server: {
+        host: true,
+        port: 8000,
+        hmr: {
+            clientPort: 5173,
+            host: 'localhost'
+        },
+        watch: {
+            usePolling: true
+        },
+    }
 });
